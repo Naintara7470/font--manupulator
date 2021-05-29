@@ -1,0 +1,29 @@
+body{
+    font-family: 'Special Elite', cursive;
+    background-size:cover;
+}
+.heading{
+    font-size: 20px;
+    width: 100%;
+    margin: 0px;
+    box-shadow: 5px 5px 5px burlywood;
+    color: seagreen;
+}
+.note{
+    font-size: 15px;
+    color: darkslateblue;
+}
+canvas{
+    border: 5px dotted teal;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px burlywood;
+}
+.copy_right_footer{
+    position: fixed;
+    color: cadetblue;
+    bottom: 0;
+    width: 100%;
+    background-color: darkmagenta;
+    line-height: 3;
+    text-align: center;
+}
