@@ -16,17 +16,21 @@ function setup()
     poseNet.on('pose', gotPoses);
 }
 
-function gotPoses(result)
+function modelLoaded(){
+    console.log("Posenet is intialized!!!!");
+}
+
+function gotPoses(results)
 {
-    if(result.length > 0)
+    if(results.length > 0)
     {
-        console.log(result);
+        console.log(results);
         noseX = results[0].pose.nose.x;
         noseY = results[0].pose.nose.x;
-        cosole.log("noseX = " + noseX +" noseY = " + noseY);
+        console.log("noseX = " + noseX +" noseY = " + noseY);
 
-        leftWristX = result[0].pose.leftWrist.x;
-        rightWristX = result[0].pose.rightWrist.x;
+        leftWristX = results[0].pose.leftWrist.x;
+        rightWristX = results[0].pose.rightWrist.x;
         difference = floor(leftWristX - rightWristX);
 
         console.log("leftWristX  = " + leftWristX  + " rightWristX = "+ rightWristX + " difference = " + difference);
@@ -37,8 +41,10 @@ function draw()
 {
     background('#969A97');
 
-    documaent.getElementById("square_side").innerHTML = "Width And Height of a Square will be = " + difference +"px";
+    document.getElementById("square_side").innerHTML = "Width And Height of a Square will be = " + difference +"px";
     fill('#F90093');
     stroke('#F90093');
     square(noseX, noseY, difference);
+    text('Neha',220,400);
+    textSize(difference);
 }

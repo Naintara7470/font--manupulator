@@ -14,7 +14,7 @@ body{
     color: darkslateblue;
 }
 canvas{
-    border: 5px dotted teal;
+    border: 5px solid teal;
     border-radius: 20px;
     box-shadow: 5px 5px 5px burlywood;
 }
@@ -25,5 +25,5 @@ canvas{
     width: 100%;
     background-color: darkmagenta;
     line-height: 3;
-    text-align: center;
+    text-align: left;
 }
